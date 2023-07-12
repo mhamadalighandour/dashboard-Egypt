@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: white;
+  --secondary: #835713;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--secondary) var(--primary);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 1px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--primary);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--secondary);
+  border-radius: 14px;
+  border: 3px solid var(--primary);
+}
+.table {
+  direction: rtl;
+}
+table thead {
+  border: 1.5px solid var(--secondary);
+}
+table thead td {
+  border: 1.5px solid var(--secondary);
+  padding: 10px 20px;
+}
+table thead td:nth-child(5) {
+  border-radius: 50px !important;
+}
+table tbody td {
+  border: 1.5px solid var(--secondary);
+  padding: 10px 20px;
+}
+.pageitem {
+  width: 10px;
+  height: 10px;
+  margin: 5px;
+  background-color: #666;
+  border-radius: 50% !important;
+}
+.page-item {
+  width: 25px;
+  height: 25px;
+  border-radius: 50% !important;
+  margin: 10px;
+  background: #aaa;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page-item .page-link {
+  width: 110%;
+  height: 110%;
+  padding: 0;
+  border-radius: 50% !important;
+  background: #aaa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+.page-item .page-link:hover {
+  background: var(--secondary);
+}
+.selected .page-link {
+  background: var(--secondary) !important;
+  color: white !important;
+  box-shadow: none;
+}
+.loading {
+  position: absolute;
+  z-index: 999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 70px;
+  height: 70px;
+  border: 7px solid var(--secondary);
+  border-top-color: transparent;
+  margin: auto;
+  border-radius: 50%;
+  animation: loading ease 0.6s infinite;
+}
+@keyframes loading {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+select {
+  text-align: center;
+}
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  bottom: -15px;
+  left: -10px;
+  color: #835713;
+}
+input[type="checkbox"]:checked {
+  background-color: #835713;
+}
+.popup {
+  background-color: rgba(000, 000, 000, 0.6);
+  z-index: 999 !important;
+}
